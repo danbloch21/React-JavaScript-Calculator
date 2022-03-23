@@ -4,19 +4,23 @@ import "./index.css";
 
 function App() {
   const [expression, setExpression] = React.useState("");
+  // eslint-disable-next-line no-lone-blocks
   {
     /* declare state variable expression and updater, with default value of an empty string */
   }
   const [answer, setAnswer] = React.useState(0);
+  // eslint-disable-next-line no-lone-blocks
   {
     /* declare state variable answer and updater, with default value of 0 */
   }
 
   const display = (symbol) => {
+    // eslint-disable-next-line no-lone-blocks
     {
-      /* defines function applied by the onClick handler */
+      /* defines function applied by the onClick handler. Runs every time you click a number or symbol button */
     }
     setExpression((prev) => prev + symbol);
+    // eslint-disable-next-line no-lone-blocks
     {
       /* setExpression takes previous expression and updates it by adding symbol passed to it from each button when onClick handler is activated */
     }
@@ -27,10 +31,15 @@ function App() {
       } else {
         setExpression(answer + symbol);
       }
+      // eslint-disable-next-line no-lone-blocks
+      {
+        /** if a symbol button is pressed after hitting equals for a total, equals is replaced by the symbol so you can continue the calculation. If a number button is pressed, previous calculation is cleared and you can start afresh */
+      }
     }
   };
 
   const calculate = () => {
+    // eslint-disable-next-line no-lone-blocks
     {
       /* defines function applied by onClick handler */
     }
@@ -39,17 +48,20 @@ function App() {
   };
 
   const allClear = () => {
+    // eslint-disable-next-line no-lone-blocks
     {
       /* defines function applied by onClick handler */
     }
     setExpression("");
     setAnswer(0);
+    // eslint-disable-next-line no-lone-blocks
     {
       /* resets input values and calculated totals to 0 */
     }
   };
 
   const clear = () => {
+    // eslint-disable-next-line no-lone-blocks
     {
       /* defines function applied by onClick handler */
     }
@@ -60,6 +72,7 @@ function App() {
         .join("")
     );
     setAnswer(0);
+    // eslint-disable-next-line no-lone-blocks
     {
       /* clears only the last input value and resets calculated total to 0 */
     }
